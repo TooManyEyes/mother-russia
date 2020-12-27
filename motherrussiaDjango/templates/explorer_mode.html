@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Explorer Mode</title>
+    <meta charset="UTF-8">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBThqORgfcyuTU1w1HJsRaMqMUT7Pz47dw&map_ids=757ff880503db59"
+            defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/game.css' %}">
+    <script src="{% static 'js/explorer_mode.js' %}"></script>
+</head>
+
+<body onload="initGameProcess()">
+<div id="game-panorama" class="panorama"></div>
+<div class="container text-center " style=" height: 75px;  z-index: 100; position: absolute; top: 20px; right: 20px">
+    <div class="row justify-content-end">
+        <div class="container">
+            <div class="row justify-content-end">
+                    <div class="game-mode-name col-4 col-md-2 d-flex align-items-center justify-content-center"
+                         style="border-radius: 5px 0 0 5px">
+                        <span class="UI-text" style="line-height: 1.2;">Режим исследователя</span>
+                    </div>
+                    <div class="round-count col-2 col-md-2 col-lg-1" >
+                        <p class="UI-text pt-2">раунд:</p>
+                        <p class="UI-text bottom" id='round'>1</p>
+                    </div>
+                    <div class="score col-2 col-md-2 col-lg-1" style="border-radius: 0 5px 5px 0 ">
+                        <p class="UI-text pt-2">счет:</p>
+                        <p class="UI-text bottom" id='score'>0</p>
+                    </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="UI rounded">
+    <div id="game-map" class="rounded"></div>
+    <div class="container pt-3 pr-3 ">
+        <div class="row justify-content-center ">
+            <div class="col-12 text-center">
+                <button id='gameButton' class="UI-button UI-text" disabled>подтвердить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+</html>

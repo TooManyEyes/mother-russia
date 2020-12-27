@@ -1,0 +1,281 @@
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 21px;
+    background: #FFFEFC;
+
+}
+
+.about-link{
+    color: #dd9a94 !important;
+}
+
+*{
+    animation: fade 0.5s ;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.card{
+    font-size: 15px;
+    background: #f8f3ed;
+    border-radius: 8px;
+}
+
+.card-footer{
+    background: none;
+    border: none;
+
+}
+
+.play-btn{
+    background: #E16259;
+    color: #FFFEFC;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.play-btn:hover{
+    color: #FFFEFC;
+    text-underline: none;
+}
+
+.play-btn:focus {
+    outline: none;
+}
+
+.UI-top {
+    background: #FFFEFC;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.UI-top-logo{
+    font-size: 30px;
+}
+
+.UI-top-btn {
+    z-index: 999;
+    border: none;
+    background: none;
+    border-radius: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.UI-top-btn:hover {
+    background: #f3eee8;
+    cursor: pointer;
+}
+
+.UI-top-btn:focus {
+    outline: none;
+}
+
+
+.UI-top-btn-text{
+    z-index: 1;
+    padding-bottom: 4px;
+    font-weight: 500;
+}
+
+.UI-md-btn-text{
+    font-size: 20px;
+}
+
+
+.underlined{
+    background-image: linear-gradient(to right, black 0%, black 100%);
+    background-repeat: repeat-x;
+    background-position: 0px 100%;
+    background-size: 100% 2px;
+}
+.mods-table{
+    border-left: #000000;
+    width: 50%;
+}
+
+#standard-mods{
+    max-width: 1400px;
+}
+
+.standard-mods-card{
+    margin: 10px;
+    padding: 0;
+}
+
+.user-mod-card{
+    margin: 15px;
+    padding: 0;
+}
+
+.user-mods{
+    max-width: 1000px;
+}
+
+.user-mods-card-title{
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+}
+
+.user-mods-card-title:hover{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+
+
+
+.editor{
+    margin-top: 50px;
+    max-width: 1400px;
+    min-height: 500px;
+}
+
+
+.editor-UI{
+    font-family: 'Inter', sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.editor-view{
+    position: relative;
+    height: 35vw;
+}
+
+
+.editor-map{
+cursor: crosshair;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 35vw;
+
+}
+
+.editor-panorama-UI{
+
+    position: absolute;
+    z-index: 99;
+    right: 0vw;
+    top: 0vw;
+    height: 20vw;
+    width: 40%;
+}
+
+.editor-panorama{
+    border-radius: 0 10px 0 5px;
+    height: 100%;
+    width: 100%;
+}
+
+.editor-UI-button-panorama{
+    margin-left: 7px;
+    margin-right: 7px;
+    font-family: 'Inter', sans-serif;
+    background: #f3eee8;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 8px;
+    border: none;
+
+}
+.editor-UI-button-panorama:focus{
+    outline: none;
+}
+
+#add-location{
+    background: #87a01c;
+    color: #f7ffe9;
+}
+
+#add-location:disabled{
+    opacity: 0.2;
+    background: #5c6e12;
+}
+#add-location:hover{
+    background: #617313;
+
+}
+#add-location:active{
+    background: #9ab71b;
+}
+
+
+#delete-location{
+    background: #cf534a;
+    color: #ffe5e5;
+}
+#delete-location:disabled{
+    opacity: 0.2;
+    background: #8c342f;
+}
+#delete-location:hover{
+    background: #a03c36;
+
+}
+#delete-location:active{
+    background: #d6564d;
+}
+
+.editor-UI-input{
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.input-group-text{
+    font-family: 'Inter', sans-serif;
+    opacity: 0.9;
+    background: #f3eee8;
+}
+
+.form-control:focus {
+    border-color: #f3eee8;
+    box-shadow: none;
+}
+
+.editor-UI-description{
+    height: 92px;
+}
+
+.editor-UI-button{
+    color: #FFFEFC;
+    background: #CF534A;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.editor-UI-button:hover{
+    background: #be473f;
+}
+
+.editor-UI-button:active {
+    background: #e5584f;
+}
+
+.editor-UI-button:focus {
+    outline: none;
+}
+
+
+.editor-UI-button-text{
+    color: #FFFEFC;
+}
+
+
+.about{
+    max-width: 1200px;
+    margin-top: 50px;
+}
