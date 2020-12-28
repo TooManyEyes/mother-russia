@@ -14,7 +14,7 @@ SECRET_KEY = '_maa)_m-r8_-6x^a^34m+3^b-q!69tdo@^)_crsk6^gaz34-@i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mother-russia.fun']
 
 
 # Application definition

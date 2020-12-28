@@ -78,4 +78,4 @@ def setresults(request):
     if like == "on":
         game_mode.likes_count += 1
         game_mode.save()
-    return redirect('http://127.0.0.1:8000/')
+    return redirect('http://mother-russia.fun/')

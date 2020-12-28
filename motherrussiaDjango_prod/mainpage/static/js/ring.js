@@ -123,7 +123,7 @@ function initGameProcess() {
             document.getElementById('gameButton').setAttribute("disabled", "true");
             if (roundCounter > 4) {
                localStorage.setItem('locations', JSON.stringify(locationsForEnding));
-               document.location.href = "http://127.0.0.1:8000/game/endgame"
+               document.location.href = "http://mother-russia/game/endgame"
 
             }
             updateRound();

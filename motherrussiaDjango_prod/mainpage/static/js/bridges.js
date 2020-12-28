@@ -237,7 +237,7 @@ function initGameProcess() {
 
             if (roundCounter > 4) {
                 localStorage.setItem('locations', JSON.stringify(locationsForEnding));
-                document.location.href = "http://127.0.0.1:8000/game/endgame";
+                document.location.href = "http://mother-russia/game/endgame";
             }
 
             playerChoice.setIcon('/static/img/bridges.png')
