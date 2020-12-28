@@ -77,7 +77,7 @@ function initGameProcess() {
             gameButton.innerText = 'подтвердить';
             document.getElementById('gameButton').setAttribute("disabled", "true");
             if (roundCounter > 4) {
-               document.location.href = "/endgame";
+               document.location.href = "/game/endgame";
                locationsForEnding = locations;
                localStorage.setItem('locations', JSON.stringify(locationsForEnding));
             }

@@ -237,7 +237,7 @@ function initGameProcess() {
 
             if (roundCounter > 4) {
                 localStorage.setItem('locations', JSON.stringify(locationsForEnding));
-                document.location.href = "/endgame";
+                document.location.href = "/game/endgame";
             }
 
             playerChoice.setIcon('/static/img/bridges.png')
