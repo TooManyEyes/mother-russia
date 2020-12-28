@@ -1,63 +1,84 @@
 let locations = [
     {
-        name: 'Московский кремль',
-        latLng: { lat: 55.7534104, lng: 37.6215856 }
+        name: 'Сергиев Посад',
+        latLng: {lat: 56.310116, lng: 38.1298335}
     },
     {
-        name: 'Казанский кремль',
-        latLng: { lat: 55.8004725, lng: 49.1044946 }
+        name: 'Переславль-Залесский',
+        latLng: {lat: 56.7361264, lng: 38.8524575}
     },
     {
-        name: 'Нижегородский кремль',
-        latLng: { lat: 56.3287724, lng: 43.9978422 }
+        name: 'Ростов',
+        latLng: {lat: 57.1843974, lng: 39.4149331}
     },
     {
-        name: 'Ростовский кремль',
-        latLng: { lat: 57.1851554, lng: 39.4143994 }
+        name: 'Ярославль',
+        'latLng': {lat: 57.6228236, lng: 39.8924097}
     },
     {
-        name: 'Смоленский кремль',
-        latLng: { lat: 54.7783116, lng: 32.0518049 }
+        name: 'Кострома',
+        latLng: {lat: 57.7772125, lng: 40.894648}
     },
     {
-        name: 'Новгородский кремль',
-        latLng: { lat: 58.5210859, lng: 31.2754965 }
+        name: 'Иваново',
+        latLng: {lat: 57.0150469, lng: 40.9688925}
     },
     {
-        name: 'Тобольский кремль',
-        latLng: { lat: 58.1985531, lng: 68.2521792 }
+        name: 'Суздаль',
+        latLng: {lat: 56.4274938, lng: 40.4404642}
     },
     {
-        name: 'Астраханский кремль',
-        latLng: { lat: 46.3497277, lng: 48.0313341 }
+        name: 'Владимир',
+        latLng: {lat: 56.1266469, lng: 40.3970226}
     },
     {
-        name: 'Тульский кремль',
-        latLng: { lat: 54.194424, lng: 37.6196463 }
+        name: 'Храм Сорока мучеников Севастийских',
+        latLng: {lat: 56.7354853, lng: 38.828335}
     },
     {
-        name: 'Коломенский кремль',
-        latLng: { lat: 55.1053917, lng: 38.7565938 }
+        name: 'Никольский монастырь',
+        latLng: {lat: 56.7318381, lng: 38.8376581}
     },
     {
-        name: 'Зарайский кремль',
-        latLng: { lat: 54.7572289, lng: 38.8725166 }
+        name: 'Свято-Троицкий Данилов мужской монастырь',
+        latLng: {lat: 56.7201048, lng: 38.8381286}
     },
     {
-        name: 'Псковский кремль',
-        latLng: { lat: 57.8214223, lng: 28.3291981 }
+        name: 'Федоровский женский монастырь',
+        latLng: {lat: 56.7126208, lng: 38.817916}
     },
     {
-        name: 'Рязанский кремль',
-        latLng: { lat: 54.63681, lng: 39.7497928 }
+        name: 'Церковь Николы Рубленого',
+        latLng: {lat: 57.6223145, lng: 39.8982612}
     },
     {
-        name: 'Вологодский кремль',
-        latLng: { lat: 59.2237801, lng: 39.8818371 }
+        name: 'Церковь Иоанна Предтечи',
+        latLng: {lat: 57.6107727, lng: 39.8563699}
+    },
+    {
+        name: 'Храм Ильи Пророка',
+        latLng: {lat: 57.6266764, lng: 39.8940841}
+    },
+    {
+        name: 'Церковь Богоявления',
+        latLng: {lat: 57.6218148, lng: 39.8863597}
+    },
+    {
+        name: 'Спасо-Яковлевский монастырь',
+        latLng: {lat: 57.1749448, lng: 39.392363}
+    },
+    {
+        name: 'Музей деревянного зодчества и крестьянского быта',
+        latLng: {lat: 56.412722, lng: 40.4405281}
+    },
+    {
+        name: 'Храм Михаила Архангела',
+        latLng: {lat: 56.4100368, lng: 40.4627334}
     },
 ]
 
 let mapCentre = {lat: 55.7538594, lng: 37.6206391}
+
 
 /*--------------------------------------------------------------Переменные-------------------------------------------------------------------------------*/
 let roundCounter = 0;
@@ -75,7 +96,7 @@ let locationsForEnding = [];
 
 /*--------------------------------------------------------------Игровой процесс--------------------------------------------------------------------------*/
 function initGameProcess() {
-    localStorage.setItem('name', 'kremlins');
+    localStorage.setItem('name', 'ring');
     //Перемешивание локаций и инициализация карты--------------------------
     shuffle(locations)
     locations = locations.slice(0, 5)
@@ -95,15 +116,14 @@ function initGameProcess() {
             locationNumber += 1;
             gameButton.innerText = 'продолжить';
             updateScore();
-
         } else { //При нажатии на "Продолжить"
             buttonStatus += 1;
             roundCounter += 1;
             gameButton.innerText = 'подтвердить';
             document.getElementById('gameButton').setAttribute("disabled", "true");
             if (roundCounter > 4) {
-                localStorage.setItem('locations', JSON.stringify(locationsForEnding));
-                document.location.href = "http://mother-russia/game/endgame"
+               localStorage.setItem('locations', JSON.stringify(locationsForEnding));
+               document.location.href = "http://127.0.0.1:8000/game/endgame"
 
             }
             updateRound();

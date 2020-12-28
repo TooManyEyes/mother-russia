@@ -43,7 +43,6 @@ document.addEventListener('click', function (event) {
     elem.hidden = !elem.hidden;
 });
 
-
 function initMap() {
     map = new google.maps.Map(document.getElementById("editor-map"), {
         zoom: 10,
@@ -78,9 +77,7 @@ function initMap() {
             document.getElementById('add-location').removeAttribute("disabled")
         }
     });
-}
 
-function openEditor(){
     map.setStreetView(panorama);
 }
 

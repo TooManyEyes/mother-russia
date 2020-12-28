@@ -54,7 +54,7 @@ function initGameProcess(locations_row) {
             gameButton.innerText = 'подтвердить';
             document.getElementById('gameButton').setAttribute("disabled", "true");
             if (roundCounter > 4) {
-                document.location.href = "http://mother-russia/game/endgame"
+                document.location.href = "http://.1270.0.1:8000/game/endgame"
             }
             updateRound();
             updateMap();
